@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useCart } from '../CartContext';
-
+import image from '../../public/profile.jpg'
 const ShoppingCart = () => {
   const { state, dispatch } = useCart();
 
@@ -60,7 +60,7 @@ const ShoppingCart = () => {
             {uniqueCartItems.map((item) => (
               <li key={item.id} className="flex justify-between items-center border-b py-2">
                 <div className="flex items-center">
-                  <img src={item.image} alt={item.name} className="mr-4 w-12 h-12" />
+                  <img src={image} alt={item.name} className="mr-4 w-12 h-12" />
                   <div>
                     <span className="font-semibold">{item.name}</span>
                     <p className="text-gray-600">${item.price}</p>

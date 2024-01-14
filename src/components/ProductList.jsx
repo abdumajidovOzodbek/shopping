@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../CartContext';
 import { products } from '../../data';
-
+import image from '../../public/profile.jpg'
 
 const ProductList = ({ addToCart }) => {
   const {dispatch}=useCart()
@@ -11,7 +11,7 @@ const ProductList = ({ addToCart }) => {
       
       {products.map((product) => (
         <div key={product.id} className="bg-white p-4 rounded-lg shadow-md">
-          <img src={'https://files.fm/f/n8dwr2uhjt'} alt={product.name} className="mb-4 rounded-md" />
+          <img src={image} alt={product.name} className="mb-4 rounded-md" />
           <h2 className="text-lg font-semibold">{product.name}</h2>
           <p className="text-gray-600">${product.price}</p>
           <button

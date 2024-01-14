@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useCart } from '../CartContext';
 import { products } from '../../data';
+import image from '../../public/profile.jpg'
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -26,7 +27,7 @@ const ProductDetail = () => {
   return (
     <div className="container mx-auto mt-8">
       <div className="flex">
-        <img src={'https://files.fm/f/n8dwr2uhjt'} alt={product.name} className="mr-8" />
+        <img src={image} alt={product.name} className="mr-8" />
         <div>
           <h2 className="text-3xl font-bold mb-4">{product.name}</h2>
           <p className="text-gray-600 mb-4">${product.price}</p>
